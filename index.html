@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Twój Przykładowy Profil</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --accent-color: #007acc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        header {
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        h1 { margin: 0; color: var(--accent-color); font-size: 2.5rem; }
+        .subtitle { font-size: 1.2rem; color: #666; margin-top: 5px; }
+        .contact-info { margin-top: 15px; font-size: 0.95rem; color: #555; }
+        .contact-info span { margin-right: 15px; }
+        h2 { color: var(--accent-color); border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 30px; }
+        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+        .skills-list li { background: var(--bg-color); padding: 6px 12px; border-radius: 4px; font-weight: 500; font-size: 0.9rem; }
+        .project, .edu-item { margin-bottom: 20px; }
+        .project-title, .edu-title { font-weight: bold; font-size: 1.1rem; }
+        .rodo { font-size: 0.75rem; color: #888; margin-top: 5px; text-align: justify; line-height: 1.3; }
+        
+        /* Стили для кнопки печати в PDF */
+        .btn-print {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border: none;
+        }
+        @media print {
+            body { padding: 0; background: #fff; }
+            .container { box-shadow: none; padding: 0; max-width: 100%; }
+            .btn-print { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Кнопка, которая позволит HR сохранить твой сайт как идеальный PDF А4 -->
+    <button class="btn-print" onclick="window.print()">Pobierz jako PDF / Drukuj</button>
+
+    <header>
+        <h1>[Твое Имя и Фамилия]</h1>
+        <div class="subtitle">Uczeń 3. klasy technikum (Technik-programista)</div>
+        <div class="contact-info">
+            <span>📍 Białystok</span>
+            <span>📞 [Твой телефон]</span>
+            <span>✉️ [Твой Email]</span>
+            <span>🔗 github.com/[твой_юзернейм]</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Profil zawodowy</h2>
+        <p>Ambitny uczeń 3. klasy technikum programistycznego w Białymstoku. Z pasją rozwijam się w obszarze web developmentu oraz programowania obiektowego. Poszukuję praktyk zawodowych w terminie 14.09 - 09.10.2026 r., aby wykorzystać zdobyte umiejętności przy realnych projektach komercyjnych i uczyć się od doświadczonych deweloperów.</p>
+    </section>
+
+    <section>
+        <h2>Umiejętności</h2>
+        <p><strong>Technologie:</strong></p>
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>C#</li>
+        </ul>
+        <p><strong>Narzędzia & Języki:</strong></p>
+        <ul class="skills-list">
+            <li>Git / GitHub</li>
+            <li>VS Code & Visual Studio</li>
+            <li>Język angielski (poziom B1 - czytanie dokumentacji)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projekty szkolne i własne</h2>
+        <div class="project">
+            <div class="project-title">1. System zarządzania bazą danych (PHP + MySQL)</div>
+            <p>Projekt aplikacji webowej realizowany w ramach nauki własnej. System pozwala na dodawanie, edycję i usuwanie danych (CRUD) z bazy relacyjnej. Zadbałem o podstawowe bezpieczeństwo zapytań SQL.</p>
+        </div>
+        <div class="project">
+            <div class="project-title">2. Responsywne strony www (HTML5 + CSS3 + JS)</div>
+            <p>Stworzenie kilku nowoczesnych witryn internetowych z wykorzystaniem CSS Flexbox/Grid oraz prostych skryptów JS ożywiających interfejs użytkownika. Pełne dopasowanie do ekranów smartfonów.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Edukacja</h2>
+        <div class="edu-item">
+            <div class="edu-title">[Название твоего техникума, например: Zespół Szkół Elektrycznych] w Białymstoku</div>
+            <div>Kierunek: Technik-programista | Okres: 2023 - obecnie (przewidywany koniec: 2028 r.)</div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Klauzula RODO</h2>
+        <div class="rodo">
+            Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO)).
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
